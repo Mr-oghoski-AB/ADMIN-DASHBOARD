@@ -16,10 +16,9 @@ body {
 
 .bod {
     display: grid;
-    grid-template-columns: 1fr minmax(max-content, 4fr) ;
-    grid-template-rows: minmax(200px, 1fr) 4fr;
-    border: 1px solid black;
-    /* height: 100vh; */
+    /* grid-template-columns: 1fr minmax(max-content, 4fr) ; */
+    grid-template-rows: minmax(150px, 1fr) 4fr;
+    height: 100vh;
     /* gap: 10px; */
 
 }
@@ -36,12 +35,12 @@ body {
     background-color: rgb(31, 134, 231);
     display: grid;
     color: white;
-    grid-template: 100px 2fr 4fr / 1fr   ;
+    grid-template: 100px 350px 4fr / 1fr   ;
     /* font-size: 1rem; */
 
 }
 h3 {
-    font-size: 25px;
+    font-size: 20px;
 }
 .svg{
     fill: white;
@@ -55,6 +54,7 @@ h3 {
     align-items: center;
     padding: 5px;
 }
+
 ul{
     padding: 15px;
     
@@ -74,13 +74,14 @@ li {
 }
 
 #header {
-    grid-column: 2 / 3;
+    grid-column: 2 / 4;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
     z-index: 2;
     display: grid;
     grid-template: 1fr 1fr ;
-    /* padding-left: 4em; */
+    padding-left: 2em;
     background-color: white;
+
     
     
 }
@@ -92,9 +93,16 @@ li {
     /* border: 1px solid black; */
 }
 
+#header > div:first-child > div:first-child{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 #header > div:first-child > div:last-child{
     display: flex;
-   gap: 30px;
+    gap: 30px;
+    align-items: center ;
   
 }
 
@@ -102,16 +110,23 @@ input{
     width: 80%;
     border: none;
     background-color: #eee;
-    border-radius: 10%;
-    height: 20px;
+    border-radius: 40px;
+    height: 30px;
+    text-indent: 10px;
 
+}
+p{
+    color: #6c757d;
+}
+
+#header > div:first-child span{
+    font-weight: 600;
 }
 
 #header > div:last-child {
     display: grid;
-    grid-template: 1fr / 1fr 1fr;
+    grid-template: 1fr / 2fr 1fr;
     align-items: center;
-    border: 1px solid black;
 }
 #header > div:last-child  > div:first-child {
     display: flex;
@@ -147,6 +162,9 @@ input{
     display: grid;
     grid-template: 1fr/ 2fr 1fr;
     gap: 25px;
+    padding-bottom: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
     /* padding-left: 1em; */
 
 }
@@ -160,6 +178,7 @@ input{
 
 #main > div:first-child > div:first-child{
     align-self: center;
+    
 }
 
 .projects {
@@ -174,25 +193,78 @@ input{
     background-color: white;
     border-left: 8px solid goldenrod;
     border-radius: 10px;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+
+.cards > div:first-child{
+    padding: 30px;
+}
+
+.cards > div:last-child {
+    display: flex;
+    justify-content: end;
+    padding-right: 40px;
+    gap: 20px;
+}
+
+.projects svg {
+    width: 20px;
+    height: 20px;
 }
 
 #main > div:last-child{
     display: grid;
-    grid-template: 50px 3fr 50px 2fr/ 1fr ;
+    grid-template: 0.5fr 3fr 0.5fr 2.5fr/ 1fr ;
     gap: 5px;
     /* border: 1px solid black; */
 
 }
 
+h4{
+    font-size: 17px;
+}
+
+#main > div:last-child > div:first-child{
+    align-self: center;
+    padding-top: 10px;
+}
+.trend {
+    align-self: end;
+}
+
 .Announcement {
     background-color: white;
     border-radius: 10px;
-    width: 80%;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    padding: 20px;
+    gap: 5px;
+ 
+}
 
+.Announcement > div:last-child{
+    border-top: 1px solid gray;
+    padding-top: 10px;
 }
 
 .Trending {
     background-color: white;
     border-radius: 10px;
-    width: 80%;
+    /* width: 80%; */
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+}
+
+.Trending svg {
+    width: 40px;
+    height: 40px;
+}
+
+.Trending > div {
+    display: flex;
+    padding-left: 10px;
+    gap: 10px;
+    align-items: center; 
+
 }
